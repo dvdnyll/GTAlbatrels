@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTAlbatrels</title>
+    <link rel="icon" href="./assets/Rockstar_Games_Logo.svg.png"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <script>
+      function toggleMenu() {
+      const menuLinks = document.querySelector(".menu-links");
+      const hamburgerIcon = document.querySelector(".hamburger-icon");
+      menuLinks.classList.toggle("open");
+      hamburgerIcon.classList.toggle("open");
+      }
+    </script>
+    <nav id="desktop-nav">
+      <div class="logo"></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">START</a></li>
+          <li><a href="#experience">MAP</a></li>
+          <li><a href="#projects">CRIMINAL</a></li>
+          <li><a href="#contact">ROAD</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+  <div class="hamburger-icon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="logo"></div>
+  <div class="menu-links">
+    <li><a href="#about" onclick="toggleMenu()">START</a></li>
+    <li><a href="#experience" onclick="toggleMenu()">MAP</a></li>
+    <li><a href="#projects" onclick="toggleMenu()">CRIMINAL</a></li>
+    <li><a href="#contact" onclick="toggleMenu()">ROAD</a></li>
+  </div>
+</nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Albatrels Academy" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">5th Albatrels Open Member</p>
+        <h1 class="title">ALBATRELS CITY</h1>
+        <p class="section__text__p2">Albatros, Petrels, Sebat</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/STUDENTS-ID.png')"
+          >
+            Download Residence ID
+          </button>
+          <button class="btn btn-color-1" onclick="window.open('./assets/FINAL_REPORT.pdf')">
+            Final Crime Report
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="seamless-section">
+      <div class="section__pic-container"></div>
+      <div>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/gta-characters.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="text-container">
+            <img
+              src="./assets/gta5-logo.png"
+              alt="GTAlbatrels Logo"
+              class="GTAlbatrels-logo"
+            />
+            <p>
+            <h1>Welcome to Albatrels City.</h1>
+            <p>
+            When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government, and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">MAP</p>
+      <h1 class="title">Albatrels City</h1>
+      <div class="experience-details-container">
+      <div class="map-container">
+        <iframe 
+          src="https://gta-5-map.com?embed=light" 
+          allowfullscreen 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+      </div>
+    </section>
+<section id="warning">
+  <div class="rating-warning-container">
+    <img src="./assets/ESRB.png" alt="Rating Warning" class="rating-warning-img" />
+  </div>
+</section>
+
+    <section id="projects">
+      <div class="project-wrapper"></div>
+  <p class="section__text__p1">CRIMINALS</p>
+  <h1 class="title">GRAND THEFT ALBATRELS</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <!-- Single Card -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/AMYIA.jpg" alt="AMYIA" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">AMYIA THALYAR</h2>
+          <p class="experience-main-title">"It's not rocket science."</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/BHRE.jpg" alt="BHRE" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">BHRE J. BAGASKARA</h2>
+          <p class="experience-main-title">"Ars longa vita brevis."</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/CHERIESH.jpg" alt="CHERIESH" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">CHÉRIESH ROSIEVERT</h2>
+          <p class="experience-main-title">If i desire it, naught shall hinder me</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/ISLA.jpg" alt="ISLA" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">ISLA MARINE</h2>
+          <p class="experience-main-title">Blooming slowly, and become my own season.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/JEVIN.jpg" alt="JEVINCIO" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">JEVINCIO CAVANEAR</h2>
+          <p class="experience-main-title">Chaos is my middle name #rispek.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/BEA.jpg" alt="BEA" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">MADĒBEA BRIDGET</h2>
+          <p class="experience-main-title">This primadonna spice up your life, babe.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/MILDEN.jpg" alt="MILDEN" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">MILDEN HARGROVE</h2>
+          <p class="experience-main-title">Time is what we want most and what we use worst.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/MORES.jpg" alt="MORES" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">MORES GALLIO</h2>
+          <p class="experience-main-title">Life's a game.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/NAAR.jpg" alt="NAAR" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">NAAR MAELAYA</h2>
+          <p class="experience-main-title">Death must be so beautiful.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/RASKAL.jpg" alt="RASKAL" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">RASKAL LAZUARDI</h2>
+          <p class="experience-main-title">Tajam pikir, tenang sikap.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/ZARA.jpg" alt="ZARA" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">ZARA MADELYNN</h2>
+          <p class="experience-main-title">Fairytales lie.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/RIBKA.jpg" alt="RIBKA" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">BERNADETTE RIBKA</h2>
+          <p class="experience-main-title">Straight A in chaos management.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+        </div>
+        <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/FAY-C.jpg" alt="FAY-C" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">FAY-C NASHAVEENKA</h2>
+          <p class="experience-main-title">Satyam Vada, Dharmam Chara.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/JIEV.jpg" alt="JIEV" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">FAYÉNWO JIEV</h2>
+          <p class="experience-main-title">Today is your chance to be an explorer.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/GAMA.jpg" alt="GAMA" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">GAMAKAÉL RHOVANTHER</h2>
+          <p class="experience-main-title">Silentium est fraud, in balance we trust.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/GREEN.jpg" alt="GREEN" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">GREENNESYA JULIETTE</h2>
+          <p class="experience-main-title">I connect dots no one else sees, sometimes on purpose.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/HIER.jpg" alt="HIER" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">HIEROGLIF J'ROUZKILL</h2>
+          <p class="experience-main-title">Your expectations aren't my purpose─so STFU.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/MANUK.jpg" alt="MANUK" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">JANUARTA MANUKERTI</h2>
+          <p class="experience-main-title">That side hustle is ngabret, bray.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/YESSARA.jpg" alt="YESSARA" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">YESSARA ASHAKRIPALA</h2>
+          <p class="experience-main-title">It is what it is.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/WANTED/CHERY.jpg" alt="CHERY" class="project-img" />
+          <button class="btn btn-color-1 detail-toggle">DETAILS</button>
+        </div>
+        <div class="overlay">
+          <h2 class="project-title">ZACHERY EVERARD</h2>
+          <p class="experience-main-title">Do it if you want, don’t if you’re not.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/DATABASE/NONE.pdf')">DATABASE</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.querySelectorAll('.detail-toggle').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const overlay = btn.closest('.details-container').querySelector('.overlay');
+    overlay.classList.toggle('active');
+
+    // Ganti teks tombol
+    if (overlay.classList.contains('active')) {
+      btn.textContent = 'X';
+    } else {
+      btn.textContent = 'DETAILS';
+    }
+  });
+});
+</script>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">SEBAT LOS SANTOS</h1>
+      <div class="los-santos-container">
+        <img
+          src="./assets/los-santos.jpg"
+          alt="LOS SANTOS"
+          class="image"
+        />
+      </div>
+      <div class="albatrels-subscribe">
+    <img src="./assets/logo-r.png" alt="R Logo" class="r-logo" />
+    <h2>Stay Connected with the Albatrels City</h2>
+    <p>
+      Get updates on politics, movie, news, life style and exclusive Albatrels events. <br />
+      Join our underground circuit and never miss the chaos.
+    </p>
+  </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <a href="https://chat.whatsapp.com/FsMrSmH0X2NBsjxhEp78Lq">Seputar Albatrels</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">START</a></li>
+            <li><a href="#experience">MAP</a></li>
+            <li><a href="#projects">CRIMINAL</a></li>
+            <li><a href="#contact">ROAD</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Bhre Jaleon Bagaskara Albatrels. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+

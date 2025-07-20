@@ -1,0 +1,928 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  border-bottom: 4px solid white;
+  padding-bottom: 5px;
+}
+
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  background-image: url('./assets/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px; /* Sesuaikan ukuran */
+  height: 50px;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: black;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    z-index: 5;
+  }
+
+  .menu-links.open {
+  max-height: 1000px;
+  background-color: rgba(0, 0, 0, 0.95);
+  transition: max-height 0.5s ease-in-out;
+  }
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+@media screen and (max-width: 768px) {
+  #hamburger-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 60px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0 1rem;
+  }
+
+  .hamburger-icon {
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .hamburger-icon span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+  }
+
+  #hamburger-nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 40px;
+    background-image: url('./assets/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  .menu-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    z-index: 5;
+  }
+
+  .menu-links.open {
+  max-height: 1000px;
+  background-color: rgba(0, 0, 0, 0.95);
+  transition: max-height 0.5s ease-in-out;
+  }
+
+  .menu-links li {
+    list-style: none;
+    padding: 1rem;
+  }
+
+  .menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 90vh;
+  background-image: url('./assets/99.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden; /* penting agar gradasi tidak keluar */
+}
+
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__piclogo-container {
+  display: flex;
+   justify-content: center; /*Tengahkan secara horizontal */
+  /*align-items: center; /* Tengahkan secara vertikal */
+  width: 200px;
+  height: 100px;
+  margin: auto; /* Agar tetap di tengah */
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+  color: #000;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05rem;
+  font-family: sans-serif;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.btn-container {
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13rem;
+    padding-bottom: 1rem;
+  }
+
+  .section__pic-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+.section__piclogo-container {
+  display: flex;
+   justify-content: center; /*Tengahkan secara horizontal */
+  /*align-items: center; /* Tengahkan secara vertikal */
+  width: 200px;
+  height: 100px;
+  margin: auto; /* Agar tetap di tengah */
+}
+
+  .btn-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1.5rem; /* supaya tidak nempel pinggir */
+    box-sizing: border-box;
+  }
+
+  .section__text {
+    position: absolute;
+    bottom: 5rem; /* atur seberapa mepetnya */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2 5rem;
+  }
+  
+  .btn {
+    width: 100%;
+    font-size: 0.95rem;
+    z-index: 1;
+  }
+}
+
+#profile::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Ubah dari 30% ke 50% atau lebih */
+  background: linear-gradient(to bottom, transparent, black);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ABOUT SECTION */
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background: linear-gradient(to bottom, black, transparent);
+  z-index: 1;
+}
+
+#about {
+  position: relative;
+  background-image: url('./assets/98.jpg'); /* Gambar sama dengan profile */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#about .outside-image {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 150px;
+  height: auto;
+}
+
+#about .outside-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Buat kotak transparan tidak nempel ke kiri */
+@media screen and (max-width: 768px) {
+  #about .section-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+}
+
+#about .section-container {
+  width: 80%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5); /* Opsional: Tambahkan transparansi agar teks tetap terbaca */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 1rem;
+}
+
+.GTAlbatrels-logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 4 auto 1rem auto; /* Tengah + jarak bawah */
+}
+
+@media screen and (max-width: 768px) {
+  .GTAlbatrels-logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto; /* Tengah + jarak bawah */
+}
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px; /* <-- Tambahkan tinggi tetap agar semua sama */
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.quote-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+.map-container {
+  width: 90vw;
+  max-width: 1000px;
+  margin: 1rem auto;
+  aspect-ratio: 16 / 6;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* Pastikan dia di atas gradasi */
+}
+
+@media screen and (max-width: 768px) {
+  .map-container {
+    aspect-ratio: 4 / 5; /* atau coba 4 / 3 */
+  }
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  z-index: 2; /* Pastikan dia di atas gradasi */
+}
+
+
+#experience {
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  padding: 5rem 0;
+  background-image: url('./assets/98.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#experience::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, black);
+  z-index: 0; /* penting: harus di bawah konten */
+}
+
+.seamless-section {
+  margin: 0;
+  padding: 5rem 10rem;
+  min-height: 100vh;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.experience-main-title{
+  color: rgb(85, 85, 85);
+  font-weight: 200;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+.details-container.color-container {
+  position: relative;
+  border-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 0; /* sudut kotak tidak melengkung */
+  padding: 0;
+  overflow: hidden;
+}
+
+.article-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 0 auto;
+}
+
+.project-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Memposisikan tombol di pojok bawah tengah gambar */
+.detail-toggle {
+  position: relative;
+  bottom: 100px; /* beri jarak dari bawah */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: transparent;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: 999px; /* tombol lonjong */
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* shadow halus */
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.detail-toggle:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .detail-toggle {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.8rem;
+    bottom: 25px; /* tetap naik di mobile */
+  }
+}
+
+/* Agar tombol tidak berubah posisi saat overlay aktif */
+.details-container .overlay.active .detail-toggle {
+  position: absolute;
+}
+
+.details-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.details-container .overlay h2,
+.details-container .overlay p {
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.details-container .overlay.active {
+  opacity: 1;
+}
+
+.details-container .detail-toggle {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+
+@media screen and (max-width: 768px) {
+  .project-btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.8rem;
+    width: min-content;
+    white-space: nowrap;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    margin: 0 auto; /* posisikan di tengah */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .detail-toggle {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: unset;
+  }
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.albatrels-subscribe {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 1rem;
+  color: white;
+}
+
+.albatrels-subscribe h2 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.albatrels-subscribe p {
+  font-size: 1rem;
+  color: rgb(200, 200, 200);
+  line-height: 1.6;
+}
+
+.r-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.los-santos-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+#warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  background-color: black;
+}
+
+.rating-warning-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-warning-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 7px;
+  border: 1px solid grey;
+  padding: 4px;
+  background-color: black;
+}
