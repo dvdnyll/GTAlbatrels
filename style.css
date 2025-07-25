@@ -147,9 +147,9 @@ a:hover {
   }
 
   .menu-links.open {
-  max-height: 1000px;
+  max-height: 600px;
   background-color: rgba(0, 0, 0, 0.95);
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
   }
 
 .hamburger-icon.open span:first-child {
@@ -182,7 +182,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 60px;
+    height: 40px;
     background-color: rgba(0,0,0,0.5);
     padding: 0 1rem;
   }
@@ -218,25 +218,28 @@ a:hover {
   }
 
   .menu-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    text-align: center;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-in-out;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    z-index: 5;
-  }
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  overflow: hidden;
+  max-height: 0; /* ⬅️ PENTING: pastikan ini ada */
+  transition: max-height 0.5s ease-in-out;
+  padding-top: 0; /* reset default padding */
+  padding-bottom: 0;
+  z-index: 5;
+}
+
 
   .menu-links.open {
-  max-height: 1000px;
+  max-height: 300px; /* bisa disesuaikan */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.95);
-  transition: max-height 0.5s ease-in-out;
-  }
+}
+
 
   .menu-links li {
     list-style: none;
@@ -433,6 +436,18 @@ section {
   }
 }
 
+#profile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, transparent, black);
+  pointer-events: none;
+  z-index: 0;
+}
+
 #profile::after {
   content: "";
   position: absolute;
@@ -446,17 +461,6 @@ section {
 }
 
 /* ABOUT SECTION */
-
-#about::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 200px;
-  width: 100%;
-  background: linear-gradient(to bottom, black, transparent);
-  z-index: 1;
-}
 
 #about {
   position: relative;
@@ -508,6 +512,17 @@ section {
   border-radius: 10px;
 }
 
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, transparent, black);
+  z-index: 0;
+}
+
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -527,6 +542,29 @@ section {
   gap: 2rem;
   margin: 2rem;
 }
+
+@media screen and (max-width: 480px) {
+  .details-container {
+    height: auto; /* agar kartu fleksibel tinggi */
+  }
+
+  .project-img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .detail-toggle {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    bottom: 20px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+}
+
 
 .about-details-container {
   display: flex;
@@ -685,6 +723,43 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  background-image: url('./assets/98.jpg'); /* Sama seperti bagian about */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  padding: 5rem 0;
+  margin: 0;
+}
+
+#projects::before,
+#projects::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0;
+}
+
+#projects::before {
+  top: 0;
+  background: linear-gradient(to bottom, black, transparent);
+}
+
+#projects::after {
+  bottom: 0;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.project-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
 
 .details-container.color-container {
   position: relative;
